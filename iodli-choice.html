@@ -1,0 +1,298 @@
+<head>
+  <meta charset="utf-8">
+  <title>iodli</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>/* You can add global styles to this file, and also import other style files */
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RSIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbiJdfQ== */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */</style><style>[_nghost-snr-c21] {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1[_ngcontent-snr-c21], h2[_ngcontent-snr-c21], h3[_ngcontent-snr-c21], h4[_ngcontent-snr-c21], h5[_ngcontent-snr-c21], h6[_ngcontent-snr-c21] {
+    margin: 8px 0;
+  }
+
+  p[_ngcontent-snr-c21] {
+    margin: 0;
+  }
+
+  .spacer[_ngcontent-snr-c21] {
+    flex: 1;
+  }
+
+  .toolbar[_ngcontent-snr-c21] {
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar[_ngcontent-snr-c21]   img[_ngcontent-snr-c21] {
+    margin: 0 16px;
+  }
+
+  .toolbar[_ngcontent-snr-c21]   #twitter-logo[_ngcontent-snr-c21] {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar[_ngcontent-snr-c21]   #twitter-logo[_ngcontent-snr-c21]:hover {
+    opacity: 0.8;
+  }
+
+  .content[_ngcontent-snr-c21] {
+    display: flex;
+    margin: 32px auto;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons[_ngcontent-snr-c21] {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons[_ngcontent-snr-c21]:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card[_ngcontent-snr-c21]   svg.material-icons[_ngcontent-snr-c21]   path[_ngcontent-snr-c21] {
+    fill: #888;
+  }
+
+  .card-container[_ngcontent-snr-c21] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card[_ngcontent-snr-c21] {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container[_ngcontent-snr-c21]   .card[_ngcontent-snr-c21]:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small[_ngcontent-snr-c21] {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container[_ngcontent-snr-c21]   .card[_ngcontent-snr-c21]:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container[_ngcontent-snr-c21]   .card[_ngcontent-snr-c21]:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(black, 0.35);
+  }
+
+  .card-container[_ngcontent-snr-c21]   .card[_ngcontent-snr-c21]:not(.highlight-card):hover   .material-icons[_ngcontent-snr-c21]   path[_ngcontent-snr-c21] {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card[_ngcontent-snr-c21] {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card[_ngcontent-snr-c21]   span[_ngcontent-snr-c21] {
+    margin-left: 60px;
+  }
+
+  svg#rocket[_ngcontent-snr-c21] {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke[_ngcontent-snr-c21] {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a[_ngcontent-snr-c21], a[_ngcontent-snr-c21]:visited, a[_ngcontent-snr-c21]:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a[_ngcontent-snr-c21]:hover {
+    color: #125699;
+  }
+
+  .terminal[_ngcontent-snr-c21] {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+  }
+
+  .terminal[_ngcontent-snr-c21]::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 0;
+    padding: 14px 0;
+    text-indent: 4px;
+  }
+
+  .terminal[_ngcontent-snr-c21]   pre[_ngcontent-snr-c21] {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+  }
+
+  .circle-link[_ngcontent-snr-c21] {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link[_ngcontent-snr-c21]:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer[_ngcontent-snr-c21] {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer[_ngcontent-snr-c21]   a[_ngcontent-snr-c21] {
+    display: flex;
+    align-items: center;
+  }
+
+  .github-star-badge[_ngcontent-snr-c21] {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  }
+
+  .github-star-badge[_ngcontent-snr-c21]:hover {
+    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+    border-color: rgba(27,31,35,.35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge[_ngcontent-snr-c21]   .material-icons[_ngcontent-snr-c21] {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  svg#clouds[_ngcontent-snr-c21] {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+
+  
+  @media screen and (max-width: 767px) {
+
+    .card-container[_ngcontent-snr-c21]    > *[_ngcontent-snr-c21]:not(.circle-link), .terminal[_ngcontent-snr-c21] {
+      width: 100%;
+    }
+
+    .card[_ngcontent-snr-c21]:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card[_ngcontent-snr-c21]   span[_ngcontent-snr-c21] {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke[_ngcontent-snr-c21] {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke[_ngcontent-snr-c21] {
+      display: none;
+      visibility: hidden;
+    }
+  }</style></head>
+  
+  
+<body>
+
+  <app-root _nghost-snr-c21="" ng-version="9.0.0-rc.8"><div _ngcontent-snr-c21="" role="banner" class="toolbar"><img _ngcontent-snr-c21="" width="40" ><span _ngcontent-snr-c21="">iodli</span><div _ngcontent-snr-c21="" class="spacer"></div></path></svg></a></div><div _ngcontent-snr-c21="" role="main" class="content"></path></path></svg></div><h2 _ngcontent-snr-c21="">Resources</h2><p _ngcontent-snr-c21="">Links to resources:</p><div _ngcontent-snr-c21="" class="card-container"><a _ngcontent-snr-c21="" target="_blank" rel="noopener" href="https://albio.iod.li/docs/doc1" class="card"><svg _ngcontent-snr-c21="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="material-icons"><path _ngcontent-snr-c21="" d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg><span _ngcontent-snr-c21="">A Level Biology</span><svg _ngcontent-snr-c21="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="material-icons"><path _ngcontent-snr-c21="" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a><a _ngcontent-snr-c21="" target="_blank" rel="noopener" href="https://alchem.iod.li/docs/doc1" class="card"><svg _ngcontent-snr-c21="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="material-icons"><path _ngcontent-snr-c21="" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg><span _ngcontent-snr-c21="">A Level Chemistry</span><svg _ngcontent-snr-c21="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="material-icons"><svg _ngcontent-snr-c21="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="material-icons"><path _ngcontent-snr-c21="" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a>
+
+</div></div></div></div>
+<div><img src="https://raw.githubusercontent.com/sgdwn/al-bio/master/static/img/logo.svg" alt="iodli logo" height="60%"></div>
+</body>
+
+<!---<a _ngcontent-snr-c21="" target="_blank" rel="noopener" href="https://blog.angular.io/" class="card"><svg _ngcontent-snr-c21="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="material-icons"><path _ngcontent-snr-c21="" d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"></path></svg><span _ngcontent-snr-c21="">Angular Blog</span><svg _ngcontent-snr-c21="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="material-icons"><path _ngcontent-snr-c21="" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z">--->
+
